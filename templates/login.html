@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block blok %}
+{% load crispy_forms_tags %}
+<form method="post">
+    {% csrf_token %}
+    {{form|crispy}}
+    <a href="/user/register" style="display:block; text-decoration: none;">Bir hesabınız yok mu?O zaman buraya
+        tıklayarak
+        kaydolabilirsiniz.</a>
+    <button type="submit" class="btn btn-dark">Giriş Yap</button>
+</form>
+{% endblock blok %}
